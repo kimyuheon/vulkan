@@ -20,7 +20,7 @@
 				"/Users/lot700/Desktop/mac_vk/dependencies/library/libvulkan.1.3.296.dylib",
 				//"/Users/lot700/Desktop/mac_vk/dependencies/library/libMoltenVK.dylib",
 				//"-add_rpath",
-            	//"Users/lot700/Desktop/mac_vk/dependencies/library",
+				//"Users/lot700/Desktop/mac_vk/dependencies/library",
 				"-o",
 				"${workspaceFolder}/app",
 				"-lvulkan", "-lmoltenVK",
