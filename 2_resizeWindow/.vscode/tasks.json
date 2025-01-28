@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang++ 활성 파일 빌드",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-std=c++17",
+				"-fcolor-diagnostics",
+				"-fansi-escape-codes",
+				"-g",
+				//"${file}",
+				"-I/Users/lot700/Desktop/mac_vk/dependencies/include",
+				"-L/Users/lot700/Desktop/mac_vk/dependencies/library",
+				"/Users/lot700/Desktop/mac_vk/vk_ex/*.cpp",
+				//"/Users/lot700/Desktop/mac_vk/vk_ex/*.hpp",
+				"/Users/lot700/Desktop/mac_vk/dependencies/library/libglfw.3.4.dylib",
+				"/Users/lot700/Desktop/mac_vk/dependencies/library/libvulkan.1.dylib",
+				"/Users/lot700/Desktop/mac_vk/dependencies/library/libvulkan.1.3.296.dylib",
+				//"/Users/lot700/Desktop/mac_vk/dependencies/library/libMoltenVK.dylib",
+				//"-add_rpath",
+            	//"Users/lot700/Desktop/mac_vk/dependencies/library",
+				"-o",
+				"${workspaceFolder}/app",
+				"-lvulkan", "-lmoltenVK",
+				"-Xlinker", "-rpath", "-Xlinker", "/Users/lot700/Desktop/mac_vk/dependencies/library",
+				//"${fileDirname}/${fileBasenameNoExtension}"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "컴파일러: /usr/bin/clang++"
+		}
+	]
+}
